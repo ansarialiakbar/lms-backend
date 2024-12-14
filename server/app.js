@@ -28,7 +28,7 @@ app.use('/api/v1/user', userRoutes)
 app.use('/api/v1/courses', courseRoutes)
 app.use('/api/v1/payment', paymentRoutes)
 
-app.all('*', (req, res)=>{
+app.all('*', (_req, res)=>{
     res.status(404).send('OOPS! 404 page not found')
 })
 // Generic error handling
